@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riandy Julfriamdony, S.Kom., Gr. - Curriculum Vitae</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --primary: #38bdf8;
+            --primary-dark: #0ea5e9;
+            --card-bg: rgba(255, 255, 255, 0.98);
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --accent-bg: #f0f9ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 3rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p.subtitle {
+            font-size: 1.15rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 1.8rem;
+        }
+
+        .contact-badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-badges span {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content Layout */
+        .content-body {
+            padding: 3rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            color: #0369a1;
+            border-bottom: 2px solid var(--accent-bg);
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* Grid Layout for Details */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Items */
+        .item {
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 3px solid #0ea5e9;
+        }
+
+        .item h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .item .meta {
+            font-size: 0.92rem;
+            color: #0284c7;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .item ul {
+            margin-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .item li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* List styling for general lists */
+        section > ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 0.8rem;
+        }
+
+        section > ul li {
+            background: #f8fafc;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        section > ul li::before {
+            content: "•";
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Skills & Interests Tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tag {
+            background: var(--accent-bg);
+            color: #0369a1;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #bae6fd;
+        }
+
+        /* Footer Action */
+        .actions {
+            text-align: center;
+            padding: 2rem;
+            background: #f8fafc;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 0.85rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem 0.5rem; }
+            header h1 { font-size: 2rem; }
+            .content-body { padding: 1.5rem; }
+            section > ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Riandy Julfriamdony, S.Kom., Gr.</h1>
+            <p class="subtitle">Pendidik, Praktisi Teknologi & Pengelola Program Pendidikan</p>
+            <div class="contact-badges">
+                <span><i class="fa-solid fa-location-dot"></i> Tangerang, Banten</span>
+                <span><i class="fa-solid fa-phone"></i> 0895635321023</span>
+                <span><i class="fa-solid fa-envelope"></i> riandyju@gmail.com</span>
+            </div>
+        </header>
+
+        <!-- Body Content -->
+        <div class="content-body">
+            
+            <!-- Profil Pribadi -->
+            <section>
+                <h2><i class="fa-solid fa-user"></i> Informasi Pribadi</h2>
+                <div class="grid-2">
+                    <div>
+                        <p><strong>Tempat, Tanggal Lahir:</strong> Jakarta, 20 Juli 1981</p>
+                        <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                        <p><strong>Agama:</strong> Islam</p>
+                    </div>
+                    <div>
+                        <p><strong>Warga Negara:</strong> Indonesia</p>
+                        <p><strong>Alamat:</strong> Perumahan Griya Permai Blok B2 No.12A, Jl. Raya Parung Panjang - Legok</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pendidikan Formal -->
+            <section>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Pendidikan Formal</h2>
+                
+                <div class="item">
+                    <h3>Universitas Sebelas Maret (UNS)</h3>
+                    <div class="meta">Fakultas Keguruan dan Ilmu Pendidikan (PPG) - Bidang Studi Informatika | Tahun Ajaran 2025</div>
+                </div>
+
+                <div class="item">
+                    <h3>STMIK Jayakarta, Salemba</h3>
+                    <div class="meta">S1 Manajemen Informatika | Tahun Ajaran 2000 - 2005</div>
+                </div>
+
+                <div class="item">
+                    <h3>SMK 3 Tomang, Jakarta Barat</h3>
+                    <div class="meta">Jurusan Akuntansi | Tahun Ajaran 1997 - 2000</div>
+                </div>
+
+                <div class="item">
+                    <h3>SLTPN 89 Tanjung Duren, Jakarta Barat</h3>
+                    <div class="meta">Tahun Ajaran 1994 - 1997</div>
+                </div>
+
+                <div class="item">
+                    <h3>SDN 09 Tomang, Jakarta Barat</h3>
+                    <div class="meta">Tahun Ajaran 1988 - 1994</div>
+                </div>
+            </section>
+
+            <!-- Pengalaman Kerja -->
+            <section>
+                <h2><i class="fa-solid fa-briefcase"></i> Pengalaman Kerja</h2>
+                
+                <div class="item">
+                    <h3>Owner & Pengelola</h3>
+                    <div class="meta">Bimbel Online "Belajar Yuuk!" | Periode 2026 - Sekarang</div>
+                </div>
+
+                <div class="item">
+                    <h3>Kesiswaan</h3>
+                    <div class="meta">SDIT Alia Nurul Jihadi | Periode 2025 - Sekarang</div>
+                </div>
+
+                <div class="item">
+                    <h3>Wali Kelas</h3>
+                    <div class="meta">SDIT Alia Nurul Jihadi | Periode 2019 - 2025</div>
+                </div>
+
+                <div class="item">
+                    <h3>Kepala Bidang SKTI & Logistik</h3>
+                    <div class="meta">PT. BCA Syariah, Tbk (Kantor Pusat) | Periode 2010 - 2019</div>
+                </div>
+
+                <div class="item">
+                    <h3>Supervisor Senior Divisi SPC</h3>
+                    <div class="meta">PT. Bank Central Asia, Tbk (Kantor Pusat) | Periode 2007 - 2010</div>
+                </div>
+
+                <div class="item">
+                    <h3>Guru Komputer</h3>
+                    <div class="meta">SMA 1 dan 3 Al-Azhar Pusat, Jakarta Selatan | Periode 2003 - 2007</div>
+                </div>
+
+                <div class="item">
+                    <h3>Guru Komputer</h3>
+                    <div class="meta">SMP Al-Azhar Pusat, Jakarta Selatan | Periode 2002 - 2003</div>
+                </div>
+            </section>
+
+            <!-- Pengalaman Teknis -->
+            <section>
+                <h2><i class="fa-solid fa-code"></i> Pengalaman Teknis & Proyek</h2>
+                <ul>
+                    <li><strong>Skripsi Project:</strong> Information System for Book Borrowing and Returning Management at Al Azhar Central Library, South Jakarta.</li>
+                    <li><strong>System Testing Support:</strong> e-BOS (Electronic Back Office System) PT. BCA, Tbk.</li>
+                    <li><strong>Head UAT:</strong> Petty Cash PT. BCA Syariah, Tbk.</li>
+                    <li><strong>Head UAT:</strong> Aktiva PT. BCA Syariah, Tbk.</li>
+                    <li><strong>Web Application Developer:</strong> Kesiswaan, SDIT Alia Nurul Jihadi.</li>
+                </ul>
+            </section>
+
+            <!-- Tugas & Kompetensi -->
+            <section>
+                <h2><i class="fa-solid fa-tasks"></i> Tugas & Kompetensi Pekerjaan</h2>
+                <ul>
+                    <li>Mengajar kelas 5 dan 6 (Ikhwan dan Akhwat).</li>
+                    <li>Bidang Kesiswaan.</li>
+                    <li>Pengembangan sistem administrasi.</li>
+                    <li>Analisis, pengolahan, dan penyajian data.</li>
+                    <li>Pengelolaan sistem informasi dan teknologi komputer.</li>
+                    <li>Perencanaan dan pengembangan program kerja.</li>
+                    <li>Penyusunan laporan, evaluasi, dan dokumentasi kegiatan.</li>
+                    <li>Koordinasi tim serta pengawasan pelaksanaan pekerjaan.</li>
+                    <li>Perencanaan anggaran dan penyusunan Rencana Anggaran Biaya (RAB).</li>
+                </ul>
+            </section>
+
+            <!-- Pengalaman Organisasi -->
+            <section>
+                <h2><i class="fa-solid fa-users"></i> Pengalaman Organisasi</h2>
+                <div class="item">
+                    <h3>Ketua Informasi dan Komunikasi Kampus</h3>
+                    <div class="meta">Periode 2004 - 2005</div>
+                </div>
+                <div class="item">
+                    <h3>Pimpinan Rohis STMIK Jayakarta</h3>
+                    <div class="meta">Periode 2003 - 2004</div>
+                </div>
+                <div class="item">
+                    <h3>Pimpinan Majalah Kampus</h3>
+                    <div class="meta">Periode 2001 - 2003</div>
+                </div>
+            </section>
+
+            <!-- Minat & Ketertarikan -->
+            <section>
+                <h2><i class="fa-solid fa-heart"></i> Minat & Ketertarikan</h2>
+                <div class="tag-container">
+                    <span class="tag">Software Office, Windows, Program Design & AI</span>
+                    <span class="tag">Analisa Data</span>
+                    <span class="tag">Arsitek & Development Program</span>
+                    <span class="tag">Analisis Program</span>
+                    <span class="tag">Perhitungan RAB</span>
+                    <span class="tag">Administrasi</span>
+                    <span class="tag">Input Data</span>
+                    <span class="tag">Desain Gambar & Video</span>
+                </div>
+            </section>
+
+            <!-- Lampiran Dokumen -->
+            <section>
+                <h2><i class="fa-solid fa-file-lines"></i> Lampiran Dokumen Resmi</h2>
+                <ul>
+                    <li>Ijazah S1 - Manajemen Informatika</li>
+                    <li>Sertifikat Pendidik</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Footer / Print Action -->
+        <div class="actions">
+            <button class="btn" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> Cetak / Simpan ke PDF
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
