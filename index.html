@@ -7,73 +7,125 @@
     <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-body {
-            background-color: #f8fafc;
-            font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
-            color: #333333;
-            margin: 0;
-            padding: 40px 20px;
-            position: relative;
-            overflow-x: hidden;
+* {
+            box-sizing: border-box;
         }
 
-        /* Sudut miring navy & gold di pojok kanan atas */
-        .corner-decor-top {
+        body {
+            background-color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+            color: #1e293b;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Container Utama CV: Elegan, Lebar Proporsional, Bayangan Halus */
+        .container, main {
+            width: 100%;
+            max-width: 850px;
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px -10px rgba(30, 41, 59, 0.1);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Aksen Geometris Header Navy-Gold di dalam Sudut Kanan Atas Kartu */
+        .container::before {
+            content: "";
             position: absolute;
             top: 0;
             right: 0;
-            width: 450px;
-            height: 140px;
-            background: linear-gradient(135deg, transparent 40%, #c5a059 40%, #c5a059 50%, #2c3e50 50%);
-            z-index: -1;
+            width: 280px;
+            height: 90px;
+            background: linear-gradient(135deg, transparent 30%, #c5a059 30%, #c5a059 45%, #1e3a8a 45%);
+            border-top-right-radius: 20px;
+            opacity: 0.9;
+            pointer-events: none;
         }
 
-        /* Pola titik-titik (dots) di pojok kiri atas */
-        .dot-pattern {
-            position: absolute;
-            top: 25px;
-            left: 50px;
-            width: 200px;
-            height: 40px;
-            background-image: radial-gradient(circle, #2c3e50 2px, transparent 2px);
-            background-size: 16px 16px;
-            z-index: -1;
+        /* Header Profil */
+        header {
+            text-align: left;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        /* Container Utama CV */
-        .container, main {
-            max-width: 850px;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 45px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+        }
+
+        header p.subtitle {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+            margin: 0 0 12px 0;
+        }
+
+        /* Badge Kontak Serasi & Rapi */
+        .contact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .contact-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8fafc;
+            color: #334155;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
             border: 1px solid #e2e8f0;
-            position: relative;
         }
 
-        /* Judul Seksi Berbentuk Kotak Pil Navy */
+        .contact-badges i {
+            color: #c5a059;
+        }
+
+        /* Judul Seksi (H2) Bergaya Modern & Profesional */
         h2, .container h2, .info-section h2, .doc-section h2 {
-            background-color: #2c3e50 !important;
+            background: #1e3a8a !important;
             color: #ffffff !important;
-            padding: 8px 20px !important;
-            border-radius: 20px !important;
-            font-size: 16px !important;
-            display: inline-block !important;
-            margin-top: 25px !important;
+            padding: 8px 18px !important;
+            border-radius: 10px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            margin-top: 30px !important;
             margin-bottom: 15px !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.15);
         }
 
-        /* Sembunyikan header biru lama */
-        .profile-header {
+        h2 i {
+            color: #c5a059 !important;
+        }
+
+        /* Sembunyikan elemen lama */
+        .profile-header, .corner-decor-top, .dot-pattern {
             display: none !important;
         }
-        }}
-        </style>
+    </style>
 </head>
 <body>
+    <body style="background-color: #f1f5f9; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; margin: 0; padding: 40px 20px;">
+    <div class="container">
     <!-- Aksen Dekorasi Pojok ala Template Profesional -->
     <div class="corner-decor-top"></div>
     <div class="dot-pattern"></div>
