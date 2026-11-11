@@ -9,28 +9,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
 body {
-            background-color: #ffffff;
-            background-image: 
-                linear-gradient(135deg, #2c3e50 0%, #1a252f 30%, transparent 30%),
-                linear-gradient(315deg, #c5a059 0%, #2c3e50 35%, transparent 35%),
-                radial-gradient(circle, #2c3e50 2px, transparent 2px);
-            background-size: 100% 200px, 100% 200px, 24px 24px;
-            background-position: top right, bottom left, top right;
-            background-repeat: no-repeat, no-repeat, repeat;
+            background-color: #f8fafc;
             font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
             color: #333333;
             margin: 0;
-            padding: 60px 20px;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
         }
 
+        /* Membuat elemen sudut miring navy & gold di pojok kanan atas */
+        .corner-decor-top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 450px;
+            height: 140px;
+            background: linear-gradient(135deg, transparent 40%, #c5a059 40%, #c5a059 50%, #2c3e50 50%);
+            z-index: -1;
+        }
+
+        /* Pola titik-titik (dots) elegan di pojok kiri atas/tengah */
+        .dot-pattern {
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            width: 200px;
+            height: 40px;
+            background-image: radial-gradient(circle, #2c3e50 2px, transparent 2px);
+            background-size: 16px 16px;
+            z-index: -1;
+        }
+
+        /* Container Utama CV */
         .container, main {
             max-width: 850px;
-            margin: 0 auto;
+            margin: 20px auto;
             background: #ffffff;
-            padding: 40px;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
             position: relative;
         }
 
+        /* Judul Seksi Berbentuk Kotak Pil Navy */
         h2, .container h2, .info-section h2, .doc-section h2 {
             background-color: #2c3e50 !important;
             color: #ffffff !important;
@@ -43,250 +66,15 @@ body {
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
+        /* Sembunyikan header biru lama */
         .profile-header {
             display: none !important;
         }
-            font-size: 16px !important;
-            display: inline-block !important;
-            margin-top: 25px !important;
-            margin-bottom: 15px !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .container h2, .info-section h2, .doc-section h2 {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 16px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        :root {
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --primary: #38bdf8;
-            --primary-dark: #0ea5e9;
-            --card-bg: rgba(255, 255, 255, 0.98);
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --border: #e2e8f0;
-            --accent-bg: #f0f9ff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--bg-gradient);
-            color: var(--text-main);
-            line-height: 1.7;
-            padding: 3rem 1rem;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Header Section */
-        header {
-            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-            color: white;
-            padding: 3.5rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        header p.subtitle {
-            font-size: 1.15rem;
-            font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 1.8rem;
-        }
-
-        .contact-badges {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-            font-size: 0.9rem;
-        }
-
-        .contact-badges span {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(5px);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Main Content Layout */
-        .content-body {
-            padding: 3rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        section h2 {
-            font-size: 1.4rem;
-            color: #0369a1;
-            border-bottom: 2px solid var(--accent-bg);
-            padding-bottom: 0.6rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            font-weight: 700;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-        }
-
-        /* Grid Layout for Details */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* Items */
-        .item {
-            margin-bottom: 1.8rem;
-            position: relative;
-            padding-left: 1rem;
-            border-left: 3px solid #0ea5e9;
-        }
-
-        .item h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .item .meta {
-            font-size: 0.92rem;
-            color: #0284c7;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-        }
-
-        .item ul {
-            margin-left: 1.2rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .item li {
-            margin-bottom: 0.4rem;
-        }
-
-        /* List styling for general lists */
-        section > ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 0.8rem;
-        }
-
-        section > ul li {
-            background: #f8fafc;
-            padding: 0.8rem 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        section > ul li::before {
-            content: "•";
-            color: #0284c7;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Skills & Interests Tags */
-        .tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-        }
-
-        .tag {
-            background: var(--accent-bg);
-            color: #0369a1;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid #bae6fd;
-        }
-
-        /* Footer Action */
-        .actions {
-            text-align: center;
-            padding: 2rem;
-            background: #f8fafc;
-            border-top: 1px solid var(--border);
-        }
-
-        .btn {
-            background: #0284c7;
-            color: white;
-            border: none;
-            padding: 0.85rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
-        }
-
-        .btn:hover {
-            background: #0369a1;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
-        }
-
-        @media (max-width: 768px) {
-            body { padding: 1rem 0.5rem; }
-            header h1 { font-size: 2rem; }
-            .content-body { padding: 1.5rem; }
-            section > ul { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
-
+    <!-- Aksen Dekorasi Pojok ala Template Profesional -->
+    <div class="corner-decor-top"></div>
+    <div class="dot-pattern"></div>
     <div class="container">
         <!-- Header -->
         <header>
