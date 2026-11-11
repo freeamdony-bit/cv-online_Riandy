@@ -118,7 +118,35 @@
             font-weight: 500;
             margin: 0 0 12px 0;
         }
+/* Styling untuk Profil Header & Foto */
+     .profile-header {
+         display: flex !important;
+         align-items: center;
+         gap: 30px;
+         border-bottom: 2px solid #f1f5f9;
+         padding-bottom: 25px;
+         margin-bottom: 25px;
+         text-align: left;
+         position: relative;
+         z-index: 2;
+     }
 
+     .profile-photo-container {
+         flex-shrink: 0;
+     }
+
+     .profile-photo-container img {
+         width: 140px;
+         height: 140px;
+         border-radius: 12px;
+         object-fit: cover;
+         border: 4px solid #ffffff;
+         box-shadow: 0 5px 15px rgba(30, 58, 138, 0.15);
+     }
+
+     .profile-text-content {
+         flex-grow: 1;
+     }
         /* Badge Kontak */
         .contact-badges {
             display: flex;
@@ -286,7 +314,21 @@
                 <span><i class="fa-solid fa-envelope"></i> riandyju@gmail.com</span>
             </div>
         </header>
-
+<!-- Header dengan Foto Profil -->
+     <header class="profile-header">
+         <div class="profile-photo-container">
+             <img src="9. FOTO DIRI.jpg" alt="Foto Profil Riandy Julfriamdony">
+         </div>
+         <div class="profile-text-content">
+             <h1>Riandy Julfriamdony, S.Kom., Gr.</h1>
+             <p class="subtitle">Pendidik, Praktisi Teknologi & Pengelola Program Pendidikan</p>
+             <div class="contact-badges">
+                 <span><i class="fa-solid fa-location-dot"></i> Tangerang, Banten</span>
+                 <span><i class="fa-solid fa-phone"></i> 0895635321023</span>
+                 <span><i class="fa-solid fa-envelope"></i> riandyju@gmail.com</span>
+             </div>
+         </div>
+     </header>
         <!-- Body Content -->
         <div class="content-body">
             
