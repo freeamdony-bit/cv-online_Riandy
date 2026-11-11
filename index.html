@@ -12,54 +12,7 @@
         * {
             box-sizing: border-box;
         }
-.tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-/* Pengatur tampilan kotak dokumen */
-        .doc-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 12px;
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
 
-        .doc-list li {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-        }
-
-        .doc-list a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            color: #334155;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        .doc-list a i {
-            font-size: 16px;
-            color: #c5a059;
-        }
-        .tag {
-            background-color: #f8fafc;
-            color: #334155;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid #e2e8f0;
-            display: inline-flex;
-            align-items: center;
-        }
         body {
             background-color: #f1f5f9;
             font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
@@ -71,12 +24,7 @@
             align-items: flex-start;
             min-height: 100vh;
         }
-/* Menyeragamkan ukuran font pada daftar teks dan poin */
-        section ul li, .content-body p, .content-body li {
-            font-size: 16px !important;
-            line-height: 1.6;
-            color: #334155;
-        }
+
         /* Container Utama CV: Elegan, Lebar Proporsional, Bayangan Halus */
         .container, main {
             width: 100%;
@@ -89,34 +37,72 @@
             position: relative;
             overflow: hidden;
         }
-/* Menyamakan ukuran font seluruh teks dan poin agar serasi */
-        p, li, .meta, ul {
-            font-size: 16px !important;
-            line-height: 1.6;
-            color: #334155;
-        }
-        
-        /* Aksen Geometris Navy-Gold rapi di pojok kanan atas DALAM kotak */
+
+        /* Aksen Geometris Navy-Gold di Pojok Kanan Atas */
         .container::before {
             content: "";
             position: absolute;
             top: 0;
             right: 0;
-            width: 260px;
-            height: 85px;
+            width: 280px;
+            height: 90px;
             background: linear-gradient(135deg, transparent 30%, #c5a059 30%, #c5a059 45%, #1e3a8a 45%);
             border-top-right-radius: 20px;
-            opacity: 0.9;
+            opacity: 0.95;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Aksen Geometris Navy-Gold di Pojok Kanan Bawah */
+        .container::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 280px;
+            height: 70px;
+            background: linear-gradient(135deg, transparent 30%, #c5a059 30%, #c5a059 45%, #1e3a8a 45%);
+            border-bottom-right-radius: 20px;
+            opacity: 0.95;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Pola Titik-Titik Dekoratif (Dot Pattern) ala Referensi */
+        .dot-pattern-top {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 120px;
+            height: 50px;
+            background-image: radial-gradient(#94a3b8 1.5px, transparent 1.5px);
+            background-size: 10px 10px;
+            opacity: 0.5;
             pointer-events: none;
         }
 
-        /* Pastikan Header & Nama Profil Muncul Jelas & Elegan */
+        .dot-pattern-right {
+            position: absolute;
+            top: 45%;
+            right: 15px;
+            width: 20px;
+            height: 180px;
+            background-image: radial-gradient(#94a3b8 1.5px, transparent 1.5px);
+            background-size: 10px 10px;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Header & Profil */
         header, .profile-header {
             display: block !important;
             text-align: left;
             border-bottom: 2px solid #f1f5f9;
             padding-bottom: 20px;
             margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
         }
 
         header h1, .profile-header h1 {
@@ -127,13 +113,13 @@
         }
 
         header p.subtitle, .profile-header p {
-            font-size: 16px;
+            font-size: 15px;
             color: #64748b;
             font-weight: 500;
             margin: 0 0 12px 0;
         }
 
-        /* Badge Kontak Serasi & Rapi */
+        /* Badge Kontak */
         .contact-badges {
             display: flex;
             flex-wrap: wrap;
@@ -149,7 +135,7 @@
             color: #334155;
             padding: 5px 12px;
             border-radius: 50px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 500;
             border: 1px solid #e2e8f0;
         }
@@ -158,13 +144,13 @@
             color: #c5a059;
         }
 
-        /* Judul Seksi (H2) Bergaya Modern & Profesional */
+        /* Judul Seksi (H2) */
         h2, .container h2, .info-section h2, .doc-section h2 {
             background: #1e3a8a !important;
             color: #ffffff !important;
             padding: 8px 18px !important;
             border-radius: 10px !important;
-            font-size: 16px !important;
+            font-size: 15px !important;
             font-weight: 600 !important;
             display: inline-flex !important;
             align-items: center !important;
@@ -178,14 +164,118 @@
             color: #c5a059 !important;
         }
 
-        /* Bersihkan elemen dekorasi luar yang tidak terpakai */
-        .corner-decor-top, .dot-pattern {
-            display: none !important;
+        /* Item Pengalaman & Pendidikan */
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 0 0 4px 0;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* Grid Informasi Pribadi */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Tag / Minat & Ketertarikan */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background-color: #f8fafc;
+            color: #334155;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Lampiran Dokumen Grid */
+        .doc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .doc-list li {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .doc-list li:hover {
+            border-color: #1e3a8a;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.08);
+        }
+
+        .doc-list a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #334155;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .doc-list a i {
+            font-size: 15px;
+            color: #c5a059;
+        }
+
+        /* Standarisasi Ukuran Font Isi & Poin */
+        p, li {
+            font-size: 14px !important;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        section ul {
+            padding-left: 20px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+
+        section ul li {
+            margin-bottom: 6px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Ornamen Titik-Titik Dekoratif -->
+        <div class="dot-pattern-top"></div>
+        <div class="dot-pattern-right"></div>
+
         <!-- Header -->
         <header>
             <h1>Riandy Julfriamdony, S.Kom., Gr.</h1>
@@ -349,7 +439,7 @@
             <!-- Lampiran Dokumen -->
             <section>
                 <h2><i class="fa-solid fa-file-lines"></i> Lampiran Dokumen Resmi</h2>
- <ul class="doc-list">
+                <ul class="doc-list">
                     <!-- Dokumen Utama -->
                     <li><a href="IJAZAH_RIANDY_1.JPg" target="_blank"><i class="fa-solid fa-image"></i> Ijazah S1 - Manajemen Informatika</a></li>
                     <li><a href="SERTIFIKAT_PPG.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Sertifikat Pendidik (PPG)</a></li>
@@ -377,10 +467,11 @@
                     <li><a href="Series I 2026.jpeg" target="_blank"><i class="fa-solid fa-image"></i> Sertifikat Series I 2026</a></li>
                     <li><a href="Filling System .jpeg" target="_blank"><i class="fa-solid fa-image"></i> Sertifikat Filling System</a></li>
                 </ul>
+            </section>
         </div>
 
         <!-- Footer / Print Action -->
-        <div class="actions" style="margin-top: 30px; text-align: center;">
+        <div class="actions" style="margin-top: 30px; text-align: center; position: relative; z-index: 2;">
             <button class="btn" onclick="window.print()" style="background: #1e3a8a; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
                 <i class="fa-solid fa-print"></i> Cetak / Simpan ke PDF
             </button>
