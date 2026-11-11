@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 * {
+* {
             box-sizing: border-box;
         }
 
@@ -23,7 +24,7 @@
             min-height: 100vh;
         }
 
-        /* Container Utama CV: Elegan, Lebar Proporsional, Bayangan Halus */
+        /* Container Utama CV */
         .container, main {
             width: 100%;
             max-width: 850px;
@@ -36,36 +37,37 @@
             overflow: hidden;
         }
 
-        /* Aksen Geometris Header Navy-Gold di dalam Sudut Kanan Atas Kartu */
+        /* Aksen Geometris Navy-Gold rapi di pojok kanan atas DALAM kotak */
         .container::before {
             content: "";
             position: absolute;
             top: 0;
             right: 0;
-            width: 280px;
-            height: 90px;
+            width: 260px;
+            height: 85px;
             background: linear-gradient(135deg, transparent 30%, #c5a059 30%, #c5a059 45%, #1e3a8a 45%);
             border-top-right-radius: 20px;
             opacity: 0.9;
             pointer-events: none;
         }
 
-        /* Header Profil */
-        header {
+        /* Pastikan Header & Nama Profil Bapak Muncul Jelas & Elegan */
+        header, .profile-header {
+            display: block !important;
             text-align: left;
             border-bottom: 2px solid #f1f5f9;
             padding-bottom: 20px;
             margin-bottom: 25px;
         }
 
-        header h1 {
+        header h1, .profile-header h1 {
             font-size: 26px;
             font-weight: 700;
             color: #0f172a;
             margin: 0 0 6px 0;
         }
 
-        header p.subtitle {
+        header p.subtitle, .profile-header p {
             font-size: 14px;
             color: #64748b;
             font-weight: 500;
@@ -117,12 +119,10 @@
             color: #c5a059 !important;
         }
 
-        /* Sembunyikan elemen lama */
-        .profile-header, .corner-decor-top, .dot-pattern {
+        /* Bersihkan elemen dekorasi luar yang tidak terpakai */
+        .corner-decor-top, .dot-pattern {
             display: none !important;
-        }
-    </style>
-</head>
+        }</head>
 <body>
     <body style="background-color: #f1f5f9; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; margin: 0; padding: 40px 20px;">
     <div class="container">
